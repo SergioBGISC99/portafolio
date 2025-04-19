@@ -3,7 +3,12 @@
     <h2 class="section-title">Cursos</h2>
 
     <div class="course-grid">
-      <div class="course-card" *ngFor="let course of courses">
+      <div
+        class="course-card"
+        *ngFor="let course of courses"
+        [class.clickable]="course.certificateUrl"
+        (click)="course.certificateUrl && openCert(course.certificateUrl)"
+      >
         <h3>{{ course.title }}</h3>
         <p>{{ course.date }}</p>
         <div class="tech-logos">
@@ -13,6 +18,10 @@
             [alt]="t.name"
             [title]="t.name"
           />
+        </div>
+
+        <div class="cert-note" *ngIf="course.certificateUrl">
+          📄 Ver certificado
         </div>
       </div>
     </div>
