@@ -1,1 +1,20 @@
-<p>courses works!</p>
+<section class="courses-container">
+  <div class="courses-content">
+    <h2 class="section-title">Cursos</h2>
+
+    <div class="course-grid">
+      <div class="course-card" *ngFor="let course of courses">
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.date }}</p>
+        <div class="tech-logos">
+          <img
+            *ngFor="let t of course.tech"
+            [src]="t.logo"
+            [alt]="t.name"
+            [title]="t.name"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
