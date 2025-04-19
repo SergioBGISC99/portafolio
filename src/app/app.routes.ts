@@ -8,11 +8,35 @@ import { CoursesComponent } from './pages/courses/courses.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'sobre-mi', component: AboutComponent },
-  { path: 'experiencia', component: ExperienceComponent },
-  { path: 'proyectos', component: ProjectsComponent },
-  { path: 'tecnologias', component: TecnologiesComponent },
-  { path: 'cursos', component: CoursesComponent },
-  { path: 'contacto', component: ContactComponent },
+  { path: '', component: HomeComponent, data: { animation: 'Home' } },
+  {
+    path: 'sobre-mi',
+    component: AboutComponent,
+    data: { animation: 'SobreMi' },
+  },
+  {
+    path: 'experiencia',
+    component: ExperienceComponent,
+    data: { animation: 'Experiencia' },
+  },
+  {
+    path: 'proyectos',
+    component: ProjectsComponent,
+    data: { animation: 'Proyectos' },
+  },
+  {
+    path: 'tecnologias',
+    component: TecnologiesComponent,
+    data: { animation: 'Tecnologias' },
+  },
+  {
+    path: 'cursos',
+    component: CoursesComponent,
+    data: { animation: 'Cursos' },
+  },
+  {
+    path: 'contacto',
+    component: ContactComponent,
+    data: { animation: 'Contacto' },
+  },
 ];

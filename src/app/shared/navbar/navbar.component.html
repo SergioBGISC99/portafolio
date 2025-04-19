@@ -44,5 +44,8 @@
     </nav>
   </mat-toolbar>
 
-  <router-outlet />
+  <main [@routeAnimations]="getAnimationState(o)">
+    <router-outlet #o="outlet"/>
+  </main>
+
 </mat-sidenav-container>

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { fadeAnimation } from '../../core/utils/route-animations';
 
 @Component({
   selector: 'app-navbar',
@@ -17,6 +18,12 @@ import { MatIconModule } from '@angular/material/icon';
     RouterModule,
   ],
   templateUrl: './navbar.component.html',
+  animations: [fadeAnimation],
   styleUrl: './navbar.component.css',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+
+  getAnimationState(outlet: any) {
+    return outlet?.activatedRouteData?.['animation'] ?? '';
+  }
+}
