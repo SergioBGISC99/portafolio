@@ -1,0 +1,85 @@
+.projects-container {
+  padding: 3rem 2rem;
+
+  .projects-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #3f51b5;
+      text-align: left;
+    }
+
+    .project-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      background-color: #f9f9f9;
+
+      .project-info {
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          margin-bottom: 1rem;
+          color: #444;
+        }
+
+        .project-techs {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-bottom: 1rem;
+
+          img {
+            width: 28px;
+            height: 28px;
+          }
+        }
+
+        .project-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          margin-top: 1.5rem;
+
+          a {
+            text-decoration: none;
+            color: #000;
+            border-radius: 6px !important;
+            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+
+            &:hover {
+              transform: translateY(-1px);
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            }
+          }
+        }
+
+        .admin-note {
+          margin-top: 0.5rem;
+          font-size: 0.9rem;
+          color: #666;
+          max-width: 450px;
+          line-height: 1.4;
+
+          strong {
+            color: #3f51b5;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
