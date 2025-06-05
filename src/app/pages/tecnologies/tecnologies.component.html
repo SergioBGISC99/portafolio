@@ -1,205 +1,132 @@
-<section class="tech-container">
-  <div class="tech-content">
-    <h2 class="section-title">Tecnologías</h2>
+<section class="px-8 py-12">
+  <div class="max-w-[900px] mx-auto text-left">
+    <h2 class="text-3xl font-bold text-emerald-600 mb-6">Tecnologías</h2>
 
-    <div class="tech-group">
-      <h3>Frontend Web</h3>
-      <div class="tech-list">
-        <div class="tech-item">
-          <img src="/icons/angular.svg" alt="Angular" />
-          <span>Angular</span>
+    <div class="mb-3">
+      <h3 class="tech-section-title">Frontend Web</h3>
+      <div class="grid space-x-2 grid-cols-2 md:grid-cols-4">
+        @for(tech of frontend; track $index) {
+        <div class="tech-chip">
+          <img
+            class="tech-chip-img"
+            [src]="tech.imgSource"
+            [alt]="tech.alternativeText"
+          />
+          <span class="tech-chip-text">{{ tech.alternativeText }}</span>
         </div>
-
-        <div class="tech-item">
-          <img src="/icons/vite.svg" alt="Vite" />
-          <span>Vite</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="/icons/vue.svg" alt="Vue" />
-          <span>Vue</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="/icons/materialui.svg" alt="Angular Material" />
-          <span>Angular Material</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="/icons/tailwindcss.svg" alt="Tailwind" />
-          <span>TailwindCSS</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="/icons/rxjs.svg" alt="RxJS" />
-          <span>RxJS</span>
-        </div>
+        }
       </div>
     </div>
 
-    <div class="tech-group">
-      <h3>Frontend Mobile</h3>
-      <div class="tech-list">
-        <div class="tech-item">
-          <img src="/icons/flutter.svg" alt="Flutter" />
-          <span>Flutter</span>
+    <div class="mb-3">
+      <h3 class="tech-section-title">Frontend Mobile</h3>
+      <div class="grid space-x-2 grid-cols-2 md:grid-cols-4">
+        @for(tech of mobile; track $index) {
+        <div class="tech-chip">
+          <img
+            class="tech-chip-img"
+            [src]="tech.imgSource"
+            [alt]="tech.alternativeText"
+          />
+          <span class="tech-chip-text">{{ tech.alternativeText }}</span>
         </div>
+        }
       </div>
     </div>
 
-    <div class="tech-group">
-      <h3>Backend</h3>
-      <div class="tech-list">
-        <div class="tech-item">
-          <img src="/icons/node.svg" alt="Node" /><span>Node.js</span>
+    <div class="mb-3">
+      <h3 class="tech-section-title">Backend</h3>
+      <div class="grid space-x-2 grid-cols-2 md:grid-cols-4">
+        @for(tech of backend; track $index) {
+        <div class="tech-chip">
+          <img
+            class="tech-chip-img"
+            [src]="tech.imgSource"
+            [alt]="tech.alternativeText"
+          />
+          <span class="tech-chip-text">{{ tech.alternativeText }}</span>
         </div>
-        <div class="tech-item">
-          <img src="/icons/nestjs.svg" alt="Nest" /><span>NestJS</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/expressjs.svg" alt="Express" /><span
-            >Express.js</span
-          >
-        </div>
-        <div class="tech-item">
-          <img src="/icons/dotnet.svg" alt="ASP" /><span>ASP.NET Web API</span>
-        </div>
+        }
       </div>
     </div>
 
-    <div class="tech-group">
-      <h3>Base de Datos</h3>
-      <div class="tech-list">
-        <div class="tech-item">
-          <img src="/icons/postgresql.svg" alt="PostgreSQL" />
-          <span>PostgreSQL</span>
+    <div class="mb-3">
+      <h3 class="tech-section-title">Base de Datos</h3>
+      <div class="grid space-x-2 grid-cols-2 md:grid-cols-4">
+        @for(tech of database; track $index) {
+        <div class="tech-chip">
+          <img
+            class="tech-chip-img"
+            [src]="tech.imgSource"
+            [alt]="tech.alternativeText"
+          />
+          <span class="tech-chip-text">{{ tech.alternativeText }}</span>
         </div>
-        <div class="tech-item">
-          <img src="/icons/sql-server.svg" alt="SQL Server" />
-          <span>Microsoft SQL Server</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/mongodb.svg" alt="Mongo" />
-          <span>MongoDB</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/sqlite.svg" alt="SQLite" />
-          <span>SQLite</span>
-        </div>
+        }
       </div>
     </div>
 
-    <div class="tech-group">
-      <h3>State Management</h3>
-      <div class="tech-list">
-        <div class="tech-item">
-          <img src="/icons/tanstack.svg" /><span>TanStack Query</span>
+    <div class="mb-3">
+      <h3 class="tech-section-title">Gestor de Estado</h3>
+      <div class="grid space-x-2 grid-cols-2 md:grid-cols-4">
+        @for(tech of state_management; track $index) {
+        <div class="tech-chip">
+          <img
+            class="tech-chip-img"
+            [src]="tech.imgSource"
+            [alt]="tech.alternativeText"
+          />
+          <span class="tech-chip-text">{{ tech.alternativeText }}</span>
         </div>
-        <div class="tech-item">
-          <img src="/icons/pinia.svg" /><span>Pinia</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/riverpod.svg" /><span>Riverpod</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/bloc.svg" /><span>Bloc</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/getx.svg" /><span>GetX</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/flutter.svg" /><span>Provider</span>
-        </div>
+        }
       </div>
     </div>
 
-    <div class="tech-group">
-      <h3>Lenguajes</h3>
-      <div class="tech-list">
-        <div class="tech-item">
-          <img src="/icons/typescript.svg" /> <span>TypeScript</span>
+    <div class="mb-3">
+      <h3 class="tech-section-title">Lenguajes</h3>
+      <div class="grid space-x-2 grid-cols-2 md:grid-cols-4">
+        @for(tech of langs; track $index) {
+        <div class="tech-chip">
+          <img
+            class="tech-chip-img"
+            [src]="tech.imgSource"
+            [alt]="tech.alternativeText"
+          />
+          <span class="tech-chip-text">{{ tech.alternativeText }}</span>
         </div>
-        <div class="tech-item">
-          <img src="/icons/javascript.svg" /> <span>JavaScript</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/dart.svg" /> <span>Dart</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/csharp.svg" /> <span>C#</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/java.svg" /> <span>Java</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/html5.svg" /> <span>HTML</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/css.svg" /> <span>CSS</span>
-        </div>
+        }
       </div>
     </div>
 
-    <div class="tech-group">
-      <h3>Testing</h3>
-      <div class="tech-list">
-        <div class="tech-item">
-          <img src="/icons/jest.svg" alt="Jest" />
-          <span>Jest</span>
+    <div class="mb-3">
+      <h3 class="tech-section-title">Testing</h3>
+      <div class="grid space-x-2 grid-cols-2 md:grid-cols-4">
+        @for(tech of testing; track $index) {
+        <div class="tech-chip">
+          <img
+            class="tech-chip-img"
+            [src]="tech.imgSource"
+            [alt]="tech.alternativeText"
+          />
+          <span class="tech-chip-text">{{ tech.alternativeText }}</span>
         </div>
-        <div class="tech-item">
-          <img src="/icons/karma.svg" alt="Karma" />
-          <span>Karma</span>
-        </div>
+        }
       </div>
     </div>
 
-    <div class="tech-group">
-      <h3>Herramientas y Otros</h3>
-      <div class="tech-list">
-        <div class="tech-item">
-          <img src="/icons/git.svg" /><span>Git</span>
+    <div class="mb-3">
+      <h3 class="tech-section-title">Otras herramientas</h3>
+      <div class="grid space-x-2 grid-cols-2 md:grid-cols-4">
+        @for(tech of tools; track $index) {
+        <div class="tech-chip">
+          <img
+            class="tech-chip-img"
+            [src]="tech.imgSource"
+            [alt]="tech.alternativeText"
+          />
+          <span class="tech-chip-text">{{ tech.alternativeText }}</span>
         </div>
-        <div class="tech-item">
-          <img src="/icons/github_light.svg" /><span>GitHub</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/prisma.svg" /><span>Prisma</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/mongoose.svg" /><span>Mongoose</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/dotnet.svg" /><span>Entity Framework</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/docker.svg" /><span>Docker</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/graphql.svg" /><span>GraphQL</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/dotnet.svg" /><span>LINQ</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/openai.svg" /><span>OpenAI API</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/jwt.svg" alt="JWT" />
-          <span>JWT</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/nginx.svg" alt="Nginx" />
-          <span>Nginx</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/kubernetes.svg" alt="Kubernetes" />
-          <span>Kubernetes</span>
-        </div>
-        <div class="tech-item">
-          <img src="/icons/google-cloud.svg" alt="Google Cloud" />
-          <span>Google Cloud</span>
-        </div>
+        }
       </div>
     </div>
   </div>

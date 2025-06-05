@@ -1,14 +1,19 @@
-<section class="projects-container">
-  <div class="projects-content">
-    <h2 class="section-title">Proyectos</h2>
+<section class="px-8 py-12">
+  <div class="max-w-[900px] mx-auto text-left">
+    <h2 class="text-3xl font-bold text-emerald-600 mb-6">Proyectos</h2>
 
-    <div class="project-card" *ngFor="let proyecto of proyectos">
-      <div class="project-info">
-        <h3>{{ proyecto.title }}</h3>
-        <p>{{ proyecto.description }}</p>
+    <div *ngFor="let proyecto of proyectos">
+      <div class="border-2 border-black bg-grat-200 rounded-2xl mb-6 p-5">
+        <h3 class="text-2xl text-gray-500 font-bold mb-3">
+          {{ proyecto.title }}
+        </h3>
+        <p class="text-base text-black mb-6 font-medium">
+          {{ proyecto.description }}
+        </p>
 
-        <div class="project-techs">
+        <div class="flex space-x-3 mb-6">
           <img
+            class="w-9 h-9 border-2 border-emerald-600 bg-white p-1 rounded-lg"
             *ngFor="let tech of proyecto.tech"
             [src]="tech.logo"
             [alt]="tech.name"
@@ -16,29 +21,27 @@
           />
         </div>
 
-        <div class="project-buttons">
+        <div class="mb-6 space-x-3">
           <a
             *ngIf="proyecto.publicUrl"
-            mat-stroked-button
-            color="primary"
             [href]="proyecto.publicUrl"
             target="_blank"
+            class="bg-emerald-500 p-2 rounded-xl font-bold"
           >
             Ver Sitio Público
           </a>
 
           <a
             *ngIf="proyecto.adminUrl"
-            mat-stroked-button
-            color="accent"
             [href]="proyecto.adminUrl"
             target="_blank"
+            class="bg-gray-200 p-2 rounded-xl font-bold"
           >
             Ver Panel Administrativo
           </a>
         </div>
 
-        <p class="admin-note" *ngIf="proyecto.adminUrl">
+        <p *ngIf="proyecto.adminUrl" class="text-gray-500">
           * Si deseas acceder al panel administrativo, solicita acceso al
           correo:
           <strong> sergiobg.isc&#64;gmail.com </strong>

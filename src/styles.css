@@ -1,11 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 
-
 .custom-sidenav-a {
   @apply bg-emerald-700 text-white font-bold select-none;
 }
 
 .home-a {
   @apply bg-emerald-600 text-white px-6 py-2 rounded-2xl hover:bg-emerald-700 transition duration-300 font-bold select-none;
+}
+
+.tech-section-title {
+  @apply text-lg text-gray-500 font-bold mb-4;
+}
+
+.tech-chip {
+  @apply flex space-x-1 items-center border-2 rounded-2xl border-gray-300 p-2 w-auto mb-1;
+}
+
+.tech-chip-img {
+  @apply h-5 w-5;
+}
+
+.tech-chip-text {
+  @apply font-normal;
 }
