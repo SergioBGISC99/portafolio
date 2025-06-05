@@ -1,26 +1,48 @@
-<section class="courses-container">
-  <div class="courses-content">
-    <h2 class="section-title">Cursos</h2>
+<section class="px-8 py-12">
+  <div class="custom-max-w mx-auto text-left">
+    <h2 class="text-3xl font-bold text-emerald-600 mb-6">Cursos</h2>
 
-    <div class="course-grid">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <div
-        class="course-card"
+        class="bg-gray-200 rounded-2xl p-3 grid grid-rows-[3.5rem_1.5rem_1fr_2.5rem_auto] h-96 hover:scale-105 transition cursor-pointer"
         *ngFor="let course of courses"
         [class.clickable]="course.certificateUrl"
         (click)="course.certificateUrl && openCert(course.certificateUrl)"
       >
-        <h3>{{ course.title }}</h3>
-        <p>{{ course.date }}</p>
-        <div class="tech-logos">
-          <img
-            *ngFor="let t of course.tech"
-            [src]="t.logo"
-            [alt]="t.name"
-            [title]="t.name"
-          />
+        <!-- Título -->
+        <h3
+          class="text-lg font-semibold text-gray-900 p-2 leading-tight overflow-hidden"
+        >
+          {{ course.title }}
+        </h3>
+
+        <!-- Fecha -->
+        <p class="text-base text-gray-500 font-medium p-1">
+          {{ course.date }}
+        </p>
+
+        <!-- Tecnologías -->
+        <div class="flex items-center justify-evenly flex-wrap gap-2 py-2">
+          @for(t of course.tech; track $index) {
+          <div
+            class="flex flex-col items-center p-1 rounded bg-gray-300 h-auto w-20"
+          >
+            <img
+              class="w-6 h-6 object-contain"
+              [src]="t.logo"
+              [alt]="t.name"
+              [title]="t.name"
+            />
+            <span class="tech-chip-text text-xs text-center">{{ t.name }}</span>
+          </div>
+          }
         </div>
 
-        <div class="cert-note" *ngIf="course.certificateUrl">
+        <!-- Certificado -->
+        <div
+          *ngIf="course.certificateUrl"
+          class="flex items-center justify-center text-sm font-bold border border-gray-800 text-emerald-600 cursor-pointer hover:text-emerald-700 transition px-4 rounded-xl"
+        >
           📄 Ver certificado
         </div>
       </div>

@@ -6,7 +6,6 @@ import { Curso } from '../../core/interfaces/curso.interface';
   selector: 'app-courses',
   imports: [CommonModule],
   templateUrl: './courses.component.html',
-  styleUrl: './courses.component.css',
 })
 export class CoursesComponent {
   courses: Curso[] = [
@@ -133,7 +132,7 @@ export class CoursesComponent {
         { name: 'Kubernetes', logo: '/icons/kubernetes.svg' },
         { name: 'Git', logo: '/icons/git.svg' },
         { name: 'GitHub', logo: '/icons/github_light.svg' },
-        { name: 'Google Cloud', logo: '/icons/google-cloud.svg' },
+        { name: 'Google', logo: '/icons/google_cloud.svg' },
       ],
     },
     {
@@ -295,7 +294,7 @@ export class CoursesComponent {
     //   tech: [{ name: 'Java', logo: '/icons/java.svg' }],
     // },
 
-     // {
+    // {
     //   date: 'En proceso',
     //   title: 'C#: Empieza tu camino en el lenguaje',
     //   tech: [{ name: 'C#', logo: '/icons/csharp.svg' }],
@@ -332,7 +331,6 @@ export class CoursesComponent {
     //   ],
     // },
 
-
     // {
     //   date: 'En proceso',
     //   title: 'Astro: El framework para sitios web orientados al contenido',
@@ -349,8 +347,6 @@ export class CoursesComponent {
     //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
     //   ],
     // },
-
-
   ];
 
   openCert(url: string): void {

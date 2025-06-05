@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 
+.custom-max-w {
+  @apply max-w-[1100px];
+}
+
 .custom-sidenav-a {
   @apply bg-emerald-700 text-white font-bold select-none;
 }
