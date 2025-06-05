@@ -1,51 +1,69 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" mode="over">
-    <mat-nav-list>
-      <a mat-list-item (click)="drawer.close()" routerLink="/">Inicio</a>
-      <a mat-list-item (click)="drawer.close()" routerLink="/sobre-mi"
-        >Sobre mí</a
+<div class="md:h-screen w-full h-full flex flex-col bg-gray-900">
+  <!-- Sidebar móvil -->
+  @if(showMenu) {
+  <div class="fixed inset-0 z-40" (click)="closeMenu()"></div>
+  }
+  <aside
+    class="fixed top-0 left-0 w-64 h-full bg-gradient-to-br from-emerald-400 to-gray-950 rounded-tr-2xl rounded-br-2xl shadow-md z-50 transform transition-transform duration-300"
+    [class.-translate-x-full]="!showMenu"
+  >
+    <nav class="flex flex-col p-4 space-y-2">
+      @for(route of routes; track $index) {
+      <a
+        class="font-bold px-4 py-2 rounded-2xl hover:bg-emerald-600 text-white transition duration-300"
+        [routerLink]="route.routerLink"
+        routerLinkActive="custom-sidenav-a"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >{{ route.routeTitle }}</a
       >
-      <a mat-list-item (click)="drawer.close()" routerLink="/experiencia"
-        >Experiencia</a
-      >
-      <a mat-list-item (click)="drawer.close()" routerLink="/proyectos"
-        >Proyectos</a
-      >
-      <a mat-list-item (click)="drawer.close()" routerLink="/tecnologias"
-        >Tecnologías</a
-      >
-      <a mat-list-item (click)="drawer.close()" routerLink="/cursos">Cursos</a>
-      <a mat-list-item (click)="drawer.close()" routerLink="/contacto"
-        >Contacto</a
-      >
-    </mat-nav-list>
-  </mat-sidenav>
+      }
+    </nav>
+  </aside>
 
-  <mat-toolbar color="primary" class="navbar">
+  <!-- Navbar -->
+  <header
+    class="sticky top-0 z-40 bg-gradient-to-r from-emerald-400 to-gray-950 flex items-center px-4 py-4 shadow-md rounded-bl-2xl rounded-br-2xl"
+  >
     <button
-      mat-icon-button
-      (click)="drawer.toggle()"
-      class="menu-button"
+      class="md:hidden inline-flex items-center justify-center p-2 text-black hover:text-white transition duration-300"
+      (click)="toggleMenu()"
       aria-label="Menu"
     >
-      <mat-icon>menu</mat-icon>
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
     </button>
 
-    <span class="brand">Sergio Barreras</span>
-    <span class="spacer"></span>
-    <nav class="nav-links">
-      <a mat-button routerLink="/">Inicio</a>
-      <a mat-button routerLink="/sobre-mi">Sobre mí</a>
-      <a mat-button routerLink="/experiencia">Experiencia</a>
-      <a mat-button routerLink="/proyectos">Proyectos</a>
-      <a mat-button routerLink="/tecnologias">Tecnologías</a>
-      <a mat-button routerLink="/cursos">Cursos</a>
-      <a mat-button routerLink="/contacto">Contacto</a>
+    <span class="font-bold text-2xl ml-2">Sergio Barreras</span>
+
+    <div class="flex-1"></div>
+
+    <nav class="hidden md:flex space-x-4">
+      @for(route of routes; track $index) {
+      <a
+        class="font-bold px-4 py-2 rounded-2xl hover:bg-emerald-600 text-white transition duration-300 select-none"
+        [routerLink]="route.routerLink"
+        routerLinkActive="custom-sidenav-a"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >{{ route.routeTitle }}</a
+      >
+      }
     </nav>
-  </mat-toolbar>
+  </header>
 
-  <main [@routeAnimations]="getAnimationState(o)">
-    <router-outlet #o="outlet"/>
+  <!-- Contenido principal -->
+  <main class="p-4 flex-1" [@routeAnimations]="getAnimationState(o)">
+    <router-outlet #o="outlet"></router-outlet>
   </main>
-
-</mat-sidenav-container>
+</div>
