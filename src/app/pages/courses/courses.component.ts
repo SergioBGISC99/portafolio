@@ -221,7 +221,7 @@ export class CoursesComponent {
       ],
     },
     {
-      date: 'Aug 27, 2024',
+      date: 'Agosto 27, 2024',
       title: 'OpenAI: Ejercicios y asistentes con Angular + NestJS',
       certificateUrl: 'https://cursos.devtalles.com/certificates/dadl3s5o1e',
       tech: [
@@ -274,75 +274,83 @@ export class CoursesComponent {
       ],
     },
     {
-      date: 'En proceso',
-      title: 'React: De cero a experto ( Hooks y MERN )',
-      tech: [
-        { name: 'React', logo: '/icons/react_light.svg' },
-        { name: 'Vite', logo: '/icons/vite.svg' },
-        { name: 'TypeScript', logo: '/icons/typescript.svg' },
-        { name: 'JavaScript', logo: '/icons/javascript.svg' },
-        { name: 'Jest', logo: '/icons/jest.svg' },
-      ],
-    },
-    {
-      date: 'En proceso',
-      title: 'Flutter + Gemini: Aplicaciones con inteligencia artificial',
-      tech: [
-        { name: 'Flutter', logo: '/icons/flutter.svg' },
-        { name: 'Dart', logo: '/icons/dart.svg' },
-        { name: 'NestJS', logo: '/icons/nestjs.svg' },
-        { name: 'TypeScript', logo: '/icons/typescript.svg' },
-        { name: 'Gemini', logo: '/icons/gemini.svg' },
-      ],
-    },
-    {
-      date: 'En proceso',
-      title: 'Patrones de Diseño: Soluciones prácticas y eficientes',
-      tech: [
-        { name: 'Deno', logo: '/icons/deno.svg' },
-        { name: 'TypeScript', logo: '/icons/typescript.svg' },
-      ],
-    },
-    {
-      date: 'En proceso',
-      title: 'Java: Explora el lenguaje desde cero',
-      tech: [{ name: 'Java', logo: '/icons/java.svg' }],
-    },
-    {
-      date: 'En proceso',
+      date: 'Junio 5, 2025',
       title: 'NestJS + Testing: Pruebas unitarias y end to end (e2e)',
+      certificateUrl: 'https://cursos.devtalles.com/certificates/4uqkvuwbrp',
       tech: [
         { name: 'NestJS', logo: '/icons/nestjs.svg' },
         { name: 'Jest', logo: '/icons/jest.svg' },
         { name: 'TypeScript', logo: '/icons/typescript.svg' },
       ],
     },
-    {
-      date: 'En proceso',
-      title: 'Astro: El framework para sitios web orientados al contenido',
-      tech: [
-        { name: 'Astro', logo: '/icons/astro.svg' },
-        { name: 'TypeScript', logo: '/icons/typescript.svg' },
-      ],
-    },
-    {
-      date: 'En proceso',
-      title: 'Qwik - Introducción al Framework',
-      tech: [
-        { name: 'Qwik', logo: '/icons/qwik.svg' },
-        { name: 'TypeScript', logo: '/icons/typescript.svg' },
-      ],
-    },
-    {
-      date: 'En proceso',
-      title: 'C#: Empieza tu camino en el lenguaje',
-      tech: [{ name: 'C#', logo: '/icons/csharp.svg' }],
-    },
-    {
-      date: 'En proceso',
-      title: 'Python: Fundamentos hasta los detalles',
-      tech: [{ name: 'Python', logo: '/icons/python.svg' }],
-    },
+    // {
+    //   date: 'En proceso',
+    //   title: 'Python: Fundamentos hasta los detalles',
+    //   tech: [{ name: 'Python', logo: '/icons/python.svg' }],
+    // },
+
+    // {
+    //   date: 'En proceso',
+    //   title: 'Java: Explora el lenguaje desde cero',
+    //   tech: [{ name: 'Java', logo: '/icons/java.svg' }],
+    // },
+
+     // {
+    //   date: 'En proceso',
+    //   title: 'C#: Empieza tu camino en el lenguaje',
+    //   tech: [{ name: 'C#', logo: '/icons/csharp.svg' }],
+    // },
+
+    // {
+    //   date: 'En proceso',
+    //   title: 'React: De cero a experto ( Hooks y MERN )',
+    //   tech: [
+    //     { name: 'React', logo: '/icons/react_light.svg' },
+    //     { name: 'Vite', logo: '/icons/vite.svg' },
+    //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
+    //     { name: 'JavaScript', logo: '/icons/javascript.svg' },
+    //     { name: 'Jest', logo: '/icons/jest.svg' },
+    //   ],
+    // },
+    // {
+    //   date: 'En proceso',
+    //   title: 'Flutter + Gemini: Aplicaciones con inteligencia artificial',
+    //   tech: [
+    //     { name: 'Flutter', logo: '/icons/flutter.svg' },
+    //     { name: 'Dart', logo: '/icons/dart.svg' },
+    //     { name: 'NestJS', logo: '/icons/nestjs.svg' },
+    //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
+    //     { name: 'Gemini', logo: '/icons/gemini.svg' },
+    //   ],
+    // },
+    // {
+    //   date: 'En proceso',
+    //   title: 'Patrones de Diseño: Soluciones prácticas y eficientes',
+    //   tech: [
+    //     { name: 'Deno', logo: '/icons/deno.svg' },
+    //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
+    //   ],
+    // },
+
+
+    // {
+    //   date: 'En proceso',
+    //   title: 'Astro: El framework para sitios web orientados al contenido',
+    //   tech: [
+    //     { name: 'Astro', logo: '/icons/astro.svg' },
+    //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
+    //   ],
+    // },
+    // {
+    //   date: 'En proceso',
+    //   title: 'Qwik - Introducción al Framework',
+    //   tech: [
+    //     { name: 'Qwik', logo: '/icons/qwik.svg' },
+    //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
+    //   ],
+    // },
+
+
   ];
 
   openCert(url: string): void {
