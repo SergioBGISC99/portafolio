@@ -1,25 +1,54 @@
-<section class="contact-container">
-  <div class="contact-content">
-    <h2 class="section-title">Contacto</h2>
+<section class="px-8 py-12">
+  <div class="max-w-lg mx-auto text-left bg-gray-100 p-6 rounded-xl">
+    <h2 class="text-3xl font-bold text-emerald-600 mb-6">Contacto</h2>
 
-    <p>
+    <p class="text-lg text-center mb-4 text-gray-500 font-bold">
       ¿Quieres saber más o conectar profesionalmente? Puedes escribirme
-      directamente:
+      directamente usando este formulario:
     </p>
 
-    <div class="contact-info">
-      <a href="mailto:sergiobg.isc@gmail.com" target="_blank">
-        <img src="/icons/gmail.svg" alt="Email" />
-        sergiobg.isc&#64;gmail.com
-      </a>
-      <a href="https://www.linkedin.com/in/sergio-barreras/" target="_blank">
-        <img src="/icons/linkedin.svg" alt="LinkedIn" />
-        LinkedIn
-      </a>
-      <a href="https://github.com/SergioBGISC99" target="_blank">
-        <img src="/icons/github_light.svg" alt="GitHub" />
-        GitHub
-      </a>
-    </div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form" class="space-y-4">
+      <div>
+        <label class="block text-sm font-bold mb-1">Nombre</label>
+        <input
+          type="text"
+          formControlName="name"
+          required
+          class="w-full px-4 py-2 border rounded"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-bold mb-1">Correo</label>
+        <input
+          type="email"
+          formControlName="email"
+          required
+          class="w-full px-4 py-2 border rounded"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-bold mb-1">Mensaje</label>
+        <textarea
+          formControlName="message"
+          rows="4"
+          required
+          class="w-full px-4 py-2 border rounded"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="form.invalid"
+        class="w-full bg-emerald-600 text-white font-bold py-2 rounded hover:bg-emerald-700"
+      >
+        Enviar mensaje
+      </button>
+
+      <p *ngIf="enviado" class="text-sm text-center mt-4 text-emerald-600">
+        ¡Gracias! Tu mensaje ha sido enviado.
+      </p>
+    </form>
   </div>
 </section>
