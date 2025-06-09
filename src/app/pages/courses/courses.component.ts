@@ -282,6 +282,35 @@ export class CoursesComponent {
         { name: 'TypeScript', logo: '/icons/typescript.svg' },
       ],
     },
+    {
+      date: 'En proceso',
+      title: 'Flutter + Gemini: Aplicaciones con inteligencia artificial',
+      tech: [
+        { name: 'Flutter', logo: '/icons/flutter.svg' },
+        { name: 'Dart', logo: '/icons/dart.svg' },
+        { name: 'NestJS', logo: '/icons/nestjs.svg' },
+        { name: 'TypeScript', logo: '/icons/typescript.svg' },
+        { name: 'Gemini', logo: '/icons/gemini.svg' },
+      ],
+    },
+    // {
+    //   date: 'En proceso',
+    //   title: 'Qwik - Introducción al Framework',
+    //   tech: [
+    //     { name: 'Qwik', logo: '/icons/qwik.svg' },
+    //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
+    //   ],
+    // },
+    {
+      date: 'En proceso',
+      title: 'React: de cero a experto - Edición 2025',
+      tech: [
+        { name: 'React', logo: '/icons/react_light.svg' },
+        { name: 'Vite', logo: '/icons/vite.svg' },
+        { name: 'TypeScript', logo: '/icons/typescript.svg' },
+      ],
+    },
+
     // {
     //   date: 'En proceso',
     //   title: 'Python: Fundamentos hasta los detalles',
@@ -302,28 +331,6 @@ export class CoursesComponent {
 
     // {
     //   date: 'En proceso',
-    //   title: 'React: De cero a experto ( Hooks y MERN )',
-    //   tech: [
-    //     { name: 'React', logo: '/icons/react_light.svg' },
-    //     { name: 'Vite', logo: '/icons/vite.svg' },
-    //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
-    //     { name: 'JavaScript', logo: '/icons/javascript.svg' },
-    //     { name: 'Jest', logo: '/icons/jest.svg' },
-    //   ],
-    // },
-    // {
-    //   date: 'En proceso',
-    //   title: 'Flutter + Gemini: Aplicaciones con inteligencia artificial',
-    //   tech: [
-    //     { name: 'Flutter', logo: '/icons/flutter.svg' },
-    //     { name: 'Dart', logo: '/icons/dart.svg' },
-    //     { name: 'NestJS', logo: '/icons/nestjs.svg' },
-    //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
-    //     { name: 'Gemini', logo: '/icons/gemini.svg' },
-    //   ],
-    // },
-    // {
-    //   date: 'En proceso',
     //   title: 'Patrones de Diseño: Soluciones prácticas y eficientes',
     //   tech: [
     //     { name: 'Deno', logo: '/icons/deno.svg' },
@@ -336,14 +343,6 @@ export class CoursesComponent {
     //   title: 'Astro: El framework para sitios web orientados al contenido',
     //   tech: [
     //     { name: 'Astro', logo: '/icons/astro.svg' },
-    //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
-    //   ],
-    // },
-    // {
-    //   date: 'En proceso',
-    //   title: 'Qwik - Introducción al Framework',
-    //   tech: [
-    //     { name: 'Qwik', logo: '/icons/qwik.svg' },
     //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
     //   ],
     // },
