@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Curso } from '../../core/interfaces/curso.interface';
 
 @Component({
@@ -7,7 +7,7 @@ import { Curso } from '../../core/interfaces/curso.interface';
   imports: [CommonModule],
   templateUrl: './courses.component.html',
 })
-export class CoursesComponent {
+export class CoursesComponent implements OnInit {
   courses: Curso[] = [
     {
       date: 'Noviembre 11, 2023',
@@ -283,14 +283,24 @@ export class CoursesComponent {
       ],
     },
     {
-      date: 'En proceso',
+      date: 'Junio 10, 2025',
       title: 'Flutter + Gemini: Aplicaciones con inteligencia artificial',
+      certificateUrl: 'https://cursos.devtalles.com/certificates/j1z4owa1bf',
       tech: [
         { name: 'Flutter', logo: '/icons/flutter.svg' },
         { name: 'Dart', logo: '/icons/dart.svg' },
         { name: 'NestJS', logo: '/icons/nestjs.svg' },
         { name: 'TypeScript', logo: '/icons/typescript.svg' },
         { name: 'Gemini', logo: '/icons/gemini.svg' },
+      ],
+    },
+
+    {
+      date: 'En proceso',
+      title: 'React: de cero a experto - Edición 2025',
+      tech: [
+        { name: 'React', logo: '/icons/react_light.svg' },
+        { name: 'TypeScript', logo: '/icons/typescript.svg' },
       ],
     },
     // {
@@ -301,34 +311,21 @@ export class CoursesComponent {
     //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
     //   ],
     // },
-    {
-      date: 'En proceso',
-      title: 'React: de cero a experto - Edición 2025',
-      tech: [
-        { name: 'React', logo: '/icons/react_light.svg' },
-        { name: 'Vite', logo: '/icons/vite.svg' },
-        { name: 'TypeScript', logo: '/icons/typescript.svg' },
-      ],
-    },
-
     // {
     //   date: 'En proceso',
     //   title: 'Python: Fundamentos hasta los detalles',
     //   tech: [{ name: 'Python', logo: '/icons/python.svg' }],
     // },
-
     // {
     //   date: 'En proceso',
     //   title: 'Java: Explora el lenguaje desde cero',
     //   tech: [{ name: 'Java', logo: '/icons/java.svg' }],
     // },
-
     // {
     //   date: 'En proceso',
     //   title: 'C#: Empieza tu camino en el lenguaje',
     //   tech: [{ name: 'C#', logo: '/icons/csharp.svg' }],
     // },
-
     // {
     //   date: 'En proceso',
     //   title: 'Patrones de Diseño: Soluciones prácticas y eficientes',
@@ -337,7 +334,6 @@ export class CoursesComponent {
     //     { name: 'TypeScript', logo: '/icons/typescript.svg' },
     //   ],
     // },
-
     // {
     //   date: 'En proceso',
     //   title: 'Astro: El framework para sitios web orientados al contenido',
@@ -350,5 +346,9 @@ export class CoursesComponent {
 
   openCert(url: string): void {
     window.open(url, '_blank');
+  }
+
+  ngOnInit(): void {
+    this.courses = this.courses.reverse();
   }
 }

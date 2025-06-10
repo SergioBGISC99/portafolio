@@ -4,7 +4,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <div
-        class="bg-gray-200 rounded-2xl p-3 grid grid-rows-[3.5rem_1.5rem_1fr_2.5rem_auto] h-96 hover:scale-105 transition cursor-pointer"
+        class="bg-gray-200 rounded-2xl p-3 grid grid-rows-[3.5rem_1.5rem_1fr_2.5rem_auto] h-96 hover:scale-105 transition duration-300 cursor-pointer shadow-xl shadow-gray-600"
         *ngFor="let course of courses"
         [class.clickable]="course.certificateUrl"
         (click)="course.certificateUrl && openCert(course.certificateUrl)"
