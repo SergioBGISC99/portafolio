@@ -72,6 +72,7 @@ export class TecnologiesComponent {
     { imgSource: '/icons/graphql.svg', alternativeText: 'GraphQL' },
     { imgSource: '/icons/dotnet.svg', alternativeText: 'LINQ' },
     { imgSource: '/icons/openai.svg', alternativeText: 'OpenAI API' },
+    { imgSource: '/icons/gemini.svg', alternativeText: 'Gemini API' },
     { imgSource: '/icons/jwt.svg', alternativeText: 'JWT' },
     { imgSource: '/icons/nginx.svg', alternativeText: 'Nginx' },
     { imgSource: '/icons/kubernetes.svg', alternativeText: 'Kubernetes' },
