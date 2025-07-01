@@ -60,6 +60,11 @@ export class TecnologiesComponent {
   testing: Technologies[] = [
     { imgSource: '/icons/jest.svg', alternativeText: 'Jest' },
     { imgSource: '/icons/karma.svg', alternativeText: 'Karma' },
+    { imgSource: '/icons/vitest.svg', alternativeText: 'Vitest' },
+    {
+      imgSource: '/icons/testing_library.svg',
+      alternativeText: 'Testing Library',
+    },
   ];
 
   tools: Technologies[] = [

@@ -301,6 +301,9 @@ export class CoursesComponent implements OnInit {
       tech: [
         { name: 'React', logo: '/icons/react_light.svg' },
         { name: 'TypeScript', logo: '/icons/typescript.svg' },
+        { name: 'Vitest', logo: '/icons/vitest.svg' },
+        { name: 'Testing Library', logo: '/icons/testing_library.svg' },
+
       ],
     },
     // {
