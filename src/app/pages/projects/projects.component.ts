@@ -25,7 +25,7 @@ export class ProjectsComponent {
     {
       title: 'BotBite - Landing Page',
       description:
-        'Proyecto realizado con Angular 20 y TailwindCSS. Despliegue automático en Netlify con dominio personalizado (botbite.com.mx). Implementación completa de rutas internas, diseño responsivo, política de privacidad y gestión de DNS vía GoDaddy.',
+        'Landing page profesional, despliegue automatizado en Netlify con dominio propio..',
       publicUrl: 'https://botbite.com.mx/home',
       tech: [
         { name: 'Angular', logo: '/icons/angular.svg' },
