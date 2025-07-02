@@ -8,9 +8,6 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectsComponent {
   proyectos: Proyecto[] = [
-
-
-
     {
       title: 'Trivias con IA',
       description:
@@ -23,6 +20,16 @@ export class ProjectsComponent {
         { name: 'PostgreSQL', logo: '/icons/postgresql.svg' },
         { name: 'OpenAI', logo: '/icons/openai.svg' },
         { name: 'Gemini', logo: '/icons/gemini.svg' },
+      ],
+    },
+    {
+      title: 'BotBite - Landing Page',
+      description:
+        'Proyecto realizado con Angular 20 y TailwindCSS. Despliegue automático en Netlify con dominio personalizado (botbite.com.mx). Implementación completa de rutas internas, diseño responsivo, política de privacidad y gestión de DNS vía GoDaddy.',
+      publicUrl: 'https://botbite.com.mx/home',
+      tech: [
+        { name: 'Angular', logo: '/icons/angular.svg' },
+        { name: 'TailwindCSS', logo: '/icons/tailwindcss.svg' },
       ],
     },
     // {
