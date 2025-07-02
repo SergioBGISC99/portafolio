@@ -25,7 +25,7 @@ export class ProjectsComponent {
     {
       title: 'BotBite - Landing Page',
       description:
-        'Landing page profesional, despliegue automatizado en Netlify con dominio propio..',
+        'Landing page profesional, despliegue automatizado en Netlify con dominio propio.',
       publicUrl: 'https://botbite.com.mx/home',
       tech: [
         { name: 'Angular', logo: '/icons/angular.svg' },
